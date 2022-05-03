@@ -4,10 +4,12 @@
 \alias{download_job}
 \title{Download compliance job}
 \usage{
-download_job(job_id)
+download_job(job_id, verbose = FALSE)
 }
 \arguments{
 \item{job_id}{A string containing the ID of the compliance job that will be downloaded.}
+
+\item{verbose}{If FALSE, the function will not print any messages.}
 }
 \value{
 dataframe A dataframe of all returned tweets.

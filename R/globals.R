@@ -1,0 +1,19 @@
+utils::globalVariables(c(
+    ".",
+    "account_created_at",
+    "action",
+    "age",
+    "checked_at",
+    "created_at",
+    "delta",
+    "df.compliance_status",
+    "grp",
+    "id",
+    "n",
+    "online_status",
+    "p",
+    "reason",
+    "redacted_at",
+    "starts_with",
+    "user_id"
+))

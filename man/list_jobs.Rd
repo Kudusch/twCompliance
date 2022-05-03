@@ -4,10 +4,12 @@
 \alias{list_jobs}
 \title{List all compliance jobs}
 \usage{
-list_jobs(type = "tweets", bearer_token = get_bearer())
+list_jobs(type = "all", status = "all", bearer_token = get_bearer())
 }
 \arguments{
-\item{type}{Only tweets is currently supported.}
+\item{type}{Type of the job. Either 'all' (default), 'tweets', or 'users'.}
+
+\item{status}{The status of the job. Either 'all' (default), 'in_progress', or 'complete'.}
 
 \item{bearer_token}{API bearer token.}
 }

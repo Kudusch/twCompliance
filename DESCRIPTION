@@ -1,7 +1,7 @@
 Package: twCompliance
 Type: Package
 Title: Create and Download Twitter Data Complicance Jobs
-Version: 1.1.0
+Version: 1.2.1
 Author: Tim Schatto-Eckrodt
 Maintainer: Tim Schatto-Eckrodt <tim.schatto-eckrodt@uni-muenster.de>
 Description: This package uses the Twitter API v2 to create, check and download data compliance jobs.
@@ -9,12 +9,17 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Depends:
-    R (>= 3.4)
+    R (>= 3.5)
 Imports: 
     dplyr,
+    tidyr,
+    magrittr,
     httr,
     jsonlite,
     lubridate,
     usethis,
-    stringr
-RoxygenNote: 7.1.1
+    stringr,
+    data.table,
+    ggplot2,
+    scales
+RoxygenNote: 7.1.2

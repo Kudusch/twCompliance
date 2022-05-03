@@ -4,12 +4,14 @@
 \alias{start_job}
 \title{Start compliance job}
 \usage{
-start_job(ids, type = "tweets", bearer_token = get_bearer())
+start_job(ids, type = "tweets", verbose = TRUE, bearer_token = get_bearer())
 }
 \arguments{
 \item{ids}{A character vector containing the status ids of the tweets that will be checked.}
 
 \item{type}{Currently only "tweets" is allowed here.}
+
+\item{verbose}{If FALSE the function will not print any messages.}
 
 \item{bearer_token}{API bearer token.}
 }

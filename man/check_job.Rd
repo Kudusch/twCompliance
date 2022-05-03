@@ -11,7 +11,7 @@ check_job(job_id, bearer_token = get_bearer(), verbose = TRUE)
 
 \item{bearer_token}{API bearer token.}
 
-\item{verbose}{A logical setting the verbosity.}
+\item{verbose}{If FALSE, the function will not print any messages.}
 }
 \value{
 If `verbose` is set to FALSE, return the jobs download URL if ready or FALSE if still in progress.
