@@ -623,11 +623,12 @@ report_text <- function(df, type = "tweets") {
             round(tbl_delta$MAX, 0),
             units(tbl_delta$MAX)
         )
-        return(paste0(paste(c(report_list, unavailability_list), collapse = " "), ". ", report_age, report_delta))
+        return(paste0(paste(c(report_list, unavailability_list), collapse = " "), ". ", report_age, report_delta, "\n"))
     } else {
-        return(paste0(paste(c(report_list, unavailability_list), collapse = " "), "."))
+        return(paste0(paste(c(report_list, unavailability_list), collapse = " "), ".\n"))
     }
 }
+#' @importFrom patchwork plot_layout
 report_plot <- function(df, type = "tweets", combine_plots = TRUE) {
 
     clr_plt <- list(
@@ -741,11 +742,10 @@ report_plot <- function(df, type = "tweets", combine_plots = TRUE) {
             y = "Density"
         )
     if (combine_plots == TRUE) {
-        (
-            (fig.1 + ggplot2::theme(legend.position = "none")) /
-            (fig.2 + ggplot2::theme(legend.position = "bottom", legend.box = "horizontal")) /
-            (fig.3)
-        )+ patchwork::plot_annotation(
+        fig.1 <- (fig.1 + ggplot2::theme(legend.position = "none"))
+        fig.2 <- (fig.2 + ggplot2::theme(legend.position = "bottom", legend.box = "horizontal"))
+        fig <- (fig.1 / fig.2 / fig.3)
+        fig + patchwork::plot_annotation(
             title = sprintf("Online status of %s", type)
         )
     } else {
