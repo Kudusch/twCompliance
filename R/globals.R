@@ -15,5 +15,7 @@ utils::globalVariables(c(
     "reason",
     "redacted_at",
     "starts_with",
-    "user_id"
+    "user_id",
+    "y",
+    "w"
 ))

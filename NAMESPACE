@@ -3,7 +3,7 @@
 S3method(print,twCompliance)
 export(download_compliance_check)
 export(get_bearer)
-export(list_jobs)
+export(list_compliance_jobs)
 export(report_compliance)
 export(set_bearer)
 export(start_compliance_check)
