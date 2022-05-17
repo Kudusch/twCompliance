@@ -19,7 +19,6 @@ Imports:
     lubridate,
     usethis,
     stringr,
-    data.table,
     ggplot2,
     scales,
     patchwork
