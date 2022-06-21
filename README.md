@@ -1,3 +1,5 @@
+> Schatto-Eckrodt, T. (2022). Hidden Biases – The Effects of Unavailable Content on Twitter on Sampling Quality. In J. Jünger, U. Gochermann, C. Peter, & M. Bachl (Eds.), *Grenzen, Probleme und Lösungen bei der Stichprobenziehung* (pp. 178–195). Herbert von Halem Verlag.
+
 # twCompliance
 
 An R-package to query the [compliance-endpoint of the Twitter API v2](https://developer.twitter.com/en/docs/twitter-api/compliance/batch-compliance/introduction).
