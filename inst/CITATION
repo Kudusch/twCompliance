@@ -1,0 +1,14 @@
+citHeader("To cite twCompliance in publications use:")
+
+bibentry(bibtype = "InCollection",
+         title = "Hidden Biases – The Effects of Unavailable Content on Twitter on Sampling Quality",
+         booktitle = "Grenzen, Probleme und Lösungen bei der Stichprobenziehung",
+         editor = c(person(family = "Jünger", given = "Jakob"),
+                    person(family = "Gochermann", given = "Ulrike"),
+                    person(family = "Peter", given = "Christina"),
+                    person(family = "Bachl", given = "Marko")),
+         author = c(person(family = "Schatto-Eckrodt", given = "Tim")),
+         url = "https://github.com/Kudusch/twCompliance",
+         year = 2022,
+         pages = "178--195",
+         publisher = "Herbert von Halem Verlag")
