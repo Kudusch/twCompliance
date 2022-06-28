@@ -1,3 +1,5 @@
+> Schatto-Eckrodt, T. (2022). Hidden Biases – The Effects of Unavailable Content on Twitter on Sampling Quality. In J. Jünger, U. Gochermann, C. Peter, & M. Bachl (Eds.), *Grenzen, Probleme und Lösungen bei der Stichprobenziehung* (pp. 178–195). Herbert von Halem Verlag.
+
 # twCompliance
 
 An R-package to query the [compliance-endpoint of the Twitter API v2](https://developer.twitter.com/en/docs/twitter-api/compliance/batch-compliance/introduction).
@@ -12,9 +14,19 @@ One caveat to be noted when using this package is that for complete data on unav
 
 ## Example usage
 
+Install the package via `devtools` from this repo.
+
+```r
+if(!require(devtools)) install.packages("devtools")
+devtools::install_github("Kudusch/twCompliance@main")
+```
+
+## Example usage
+
 First, you need to set your API bearer token. To do that, just call the `set_bearer()` function and follow the instructions.
 
-``` > head(df.example_data)
+```r 
+> head(df.example_data)
 # A tibble: 6 × 4
   status_id  user_id   created_at          account_created_at 
   <chr>      <chr>     <dttm>              <dttm>             
@@ -28,7 +40,7 @@ First, you need to set your API bearer token. To do that, just call the `set_bea
 
 Given a data.frame of tweets with the according `status_id`, `user_id`, `created_at`, and `account_created_at` column, we can use the `start_compliance_check()` function to start a compliance check.
 
-```
+```r
 > check_id.example_data <- start_compliance_check(df.example_data)
 ℹ Starting compliance check and uploading data (this might take a while)
 ✓ Compliance check started successfully:
@@ -45,7 +57,7 @@ The returned object stores the ids needed to download the compliance data. The c
 
 You can check the progress on the compliance check by calling `download_compliance_check()` on the check_id object returned from `start_compliance_check()` like so:
 
-```
+```r
 > check_df.example_data <- download_compliance_check(check_id.example_data)
 ℹ Jobs are not ready yet
   
@@ -66,7 +78,7 @@ You can see that there are two checks running simultaneously (you can only have 
 
 When both checks are done, just call `download_compliance_check()` again and save the resulting data.frame:
 
-```
+```r
 check_df.example_data <- download_compliance_check(check_id.example_data)
 ```
 
@@ -78,7 +90,7 @@ The resulting data.frame includes the original tweets you checked and three new 
 
 Using `report_compliance()` you can now generate a short textual report to include in a paper or data statement:
 
-```
+```r
 > report_compliance(check_df.example_data, plot = TRUE)
 On May 16, 2022 57.47% of all tweets were still available through the API. Unavailability was due to account suspension (25.33%), deleted user accounts (7.76%), deleted tweets (6.15%), protected user accounts (2.93%), and deactivated user accounts (0.04%). At the time of checking, the tweets were on average 1006 days old. The 33.57 percent of tweets where an redacted_at time was available, were on average made unavailabe 418 days after creation (MIN = 29 days, MAX = 1007 days).
 ```
