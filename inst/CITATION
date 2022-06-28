@@ -1,0 +1,23 @@
+## R package reference generated from DESCRIPTION metadata
+citation(auto = meta)
+
+## Book chapter
+bibentry(
+    bibtype = "InBook",
+    booktitle = "Grenzen, Probleme und Lösungen bei der Stichprobenziehung",
+    title = "Hidden Biases - The Effects of Unavailable Content on Twitter on Sampling Quality",
+    chapter = "7",
+    series = "Methoden und Forschungslogik der Kommunikationswissenschaft",
+    volume = "17",
+    author = person("Tim", "Schatto-Eckrodt"),
+    editor = c(
+        person("Jakob", "Jünger"),
+        person("Ulrike", "Gochermann"),
+        person("Christina", "Peter"),
+        person("Marko", "Bachl")
+    ),
+    pages = "178–195",
+    year = "2022", 
+    publisher = "Herbert von Halem Verlag"
+)
+
