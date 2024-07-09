@@ -1,3 +1,5 @@
+Note: As of July 2024, the Compliance API endpoint is only usable with a paid subscription to the Twitter API. The Basic and Free tier cannot use the endpoint required for this package to work.
+
 > Schatto-Eckrodt, T. (2022). Hidden Biases – The Effects of Unavailable Content on Twitter on Sampling Quality. In J. Jünger, U. Gochermann, C. Peter, & M. Bachl (Eds.), *Grenzen, Probleme und Lösungen bei der Stichprobenziehung* (pp. 178–195). Herbert von Halem Verlag.
 
 # twCompliance
